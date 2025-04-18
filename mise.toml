@@ -18,8 +18,9 @@ hide = true
 description = "Legyártja a forrás fájlokból a weboldalt"
 run         = "hugo build --minify"
 hide        = true
-sources     = ['mise.toml', 'hugo.toml', 'archetypes', 'assets', 'content', 'data', 'i18n', 'resources', 'static', 'themes']
+#sources     = ['mise.toml', 'hugo.toml', 'archetypes/**', 'assets/**', 'content/**', 'data/**', 'i18n/**', 'resources/**', 'static/**', 'themes/**']
 outputs     = ['public/*.html']
+wait_for    = ['publish:clean']
 
 [tasks."publish:kezi-publikalas"]
 description = "Kezzel publikalja az oldalt"
