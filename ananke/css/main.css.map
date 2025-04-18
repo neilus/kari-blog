@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/neilus/dev/private/kariblog/kari-blog",
+	"sourceRoot": "/home/runner/work/kari-blog/kari-blog",
 	"sources": [
 		"ananke/css/main.css"
 	],
