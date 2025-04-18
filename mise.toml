@@ -1,0 +1,10 @@
+[tools]
+hugo-extended = "0.146.4"
+
+[tasks."server:preview"]
+description = "Elindítja a local szervert és megnyitja az oldalt böngészőben"
+run = "hugo server --buildDrafts --buildExpired --buildFuture --navigateToChanged --openBrowser"
+
+[tasks."server:nodrafts"]
+description = "Elindítja a local szervert és megnyitja az oldalt böngészőben"
+run = "hugo server --navigateToChanged --openBrowser"
