@@ -1,0 +1,40 @@
+name: GitHub Pages
+
+# Trigger the workflow on pushes to the main branch.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+
+    steps:
+      # 1. Check out the repository.
+      - name: Check Out Repository
+        uses: actions/checkout@v2
+
+      # 2. Setup Hugo (using an action that installs Hugo).
+      - name: Setup mise en place
+        uses: jdx/mise-action@v2
+        with:
+          version: 2025.4.2
+          install: true
+          cache: true
+          log_level: info
+
+      # 3. Build the site.
+      - name: Build the Site
+        run: mise run publish:build
+
+      # 4. Deploy the public folder to GitHub Pages.
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+
