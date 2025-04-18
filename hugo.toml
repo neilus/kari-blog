@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://neilus.github.io/kari-blog'
 languageCode = 'en-us'
 title = 'Kari Blogja'
 # theme = 'hugo-book'
